@@ -1,0 +1,1007 @@
+
+/* General */
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-image: linear-gradient(to right, black 20%, black 50%, rgb(255, 255, 255) 50%);
+}
+
+body::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Edge */
+}
+
+/* troggle */
+
+
+.btn-close:hover {
+    transform: rotate(180deg); /* Rotates the button 180 degrees */
+    opacity: 0.8; /* Slight fade */
+}
+
+@keyframes bounce {
+    0% { transform: scale(1); }
+    30% { transform: scale(1.2); }
+    50% { transform: scale(0.9); }
+    70% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.btn-close:hover {
+    animation: bounce 0.6s ease; /* Add bounce animation */
+    opacity: 0.8; /* Fade effect */
+}
+
+
+
+.troggle-img{
+position: relative;
+right: 390px;
+top: 20px;
+
+
+
+}
+
+.nav-link{
+  position: relative;
+  border-radius: 50px;
+  background: transparent;
+  border: 2px solid var(--clr);
+  color: var(--clr);
+  font-weight: 600;
+  cursor: pointer;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.75s;
+  z-index: 2;
+
+}
+
+.nav-link::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--clr);
+  clip-path: circle(0% at 50% 50%);
+  transition: 0.75s;
+  z-index: -1;
+}
+
+.nav-link:hover::after{
+  clip-path: circle(100% at 50% 50%);
+  border-radius: 39px;
+}
+
+.nav-link:hover {
+  color: black;
+  box-shadow: 0 0 10px var(--clr),
+  0 0 50px var(--clr);
+}
+
+
+
+
+
+
+
+.underline1{
+    list-style: none;
+    text-align: center;
+    font-size: 80px;
+    align-items: center;
+    align-content: center;
+    position: relative;
+    top: 100px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+ 
+    
+}
+
+/* Container for scrolling text */
+.scrolling-text {
+    width: 100%;
+    overflow: hidden; /* Hide content that overflows the container */
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+    white-space: nowrap; /* Ensure the text doesn't break into multiple lines */
+  }
+  
+  /* Styling for the scrolling text */
+  .heading1 {
+    position: absolute;
+    left: 100%; /* Start the text off-screen to the right */
+    top: 30px; /* Adjust the vertical position as needed */
+    text-align: center;
+    font-size: 70px;
+    color: rgb(255, 255, 255);
+
+   /* White text color */
+    animation: scrollText 10s linear infinite; /* Animation: Move the text */
+  }
+  
+  /* Define the keyframe for the scrolling animation */
+  @keyframes scrollText {
+    0% {
+      left: 100%; /* Start from the right edge */
+    }
+    100% {
+      left: -200%; /* End off-screen to the left */
+    }
+  }
+  
+  .heading2 {
+    position: absolute;
+    left: 100%; /* Start the text off-screen to the right */
+    top: 30px; /* Adjust the vertical position as needed */
+    text-align: center;
+    font-size: 70px;
+    color: rgb(255, 255, 255); /* White text color */
+    animation: scrollText1 10s linear infinite; /* Animation: Move the text */
+  }
+  
+  /* Define the keyframe for the scrolling animation */
+  @keyframes scrollText1 {
+    0% {
+      left: 180%; /* Start off-screen to the right */
+    }
+   
+    100% {
+      left: -100%; /* End off-screen to the left */
+    }
+  }
+  
+  .heading3 {
+    position: absolute;
+    left: 100%; /* Start the text off-screen to the right */
+    top: 30px; /* Adjust the vertical position as needed */
+    text-align: center;
+    font-size: 70px;
+    color: rgb(255, 255, 255); /* White text color */
+    animation: scrollText2 10s linear infinite; /* Animation: Move the text */
+  }
+  
+  /* Define the keyframe for the scrolling animation */
+  @keyframes scrollText2 {
+    0% {
+      left: 280%; /* Start off-screen to the right */
+    }
+   
+    100% {
+      left: -40%; /* End off-screen to the left */
+    }
+  }
+  
+
+
+.fullcontrol{
+
+  background-color: #000000;
+    border-right: 7px solid white;
+    width: 1440px;
+}
+
+
+/* navbar */
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-item{
+    display: flex;
+
+    list-style: none;
+    text-decoration: none;
+    position: relative;
+    top: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 800;
+    font-size: 25px;
+
+}
+
+.item1{
+  color: transparent;
+    color: aliceblue;
+    position: relative;
+    left: 15px;
+
+}
+
+
+
+.item2{
+color: #000000;
+    position: relative;
+    left: 30px;
+}
+
+.underline{
+    list-style: none;
+    display: flex;
+gap: 40px;
+}
+
+
+.item1::before,
+.item1::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 4px;
+  background-color: #fff; 
+  transition: width 0.3s ease; 
+}
+
+
+.item1::before {
+  top: -5px; 
+  left: 0;
+}
+
+
+.item1::after {
+  bottom: -5px; 
+  left: 0;
+}
+
+
+.item1:hover::before,
+.item1:hover::after {
+  width: 100%; 
+}
+
+.item1:hover {
+  color: #ffffff; 
+}
+
+.item2::before,
+.item2::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 4px;
+  background-color: #000000; 
+  transition: width 0.3s ease; 
+}
+
+
+.item2::before {
+  top: -5px; 
+  left: 0;
+}
+
+
+.item2::after {
+  bottom: -5px; 
+  left: 0;
+}
+
+
+.item2:hover::before,
+.item2:hover::after {
+  width: 100%; 
+}
+
+.item2:hover {
+  color:#000000; 
+}
+
+
+
+
+
+
+
+
+/* searchbar */
+
+form{
+    position: relative;
+  bottom: 15px;
+    left: 86%;
+    transform: translate(-50%,-50%);
+    transition: all 1s;
+    width: 50px;
+    height: 50px;
+    background: white;
+    box-sizing: border-box;
+    border-radius: 25px;
+    border: 4px solid rgb(255, 255, 255);
+    padding: 5px;
+
+}
+
+input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;;
+    height: 42.5px;
+    line-height: 30px;
+    outline: 0;
+    border: 0;
+    display: none;
+    font-size: 1em;
+    border-radius: 20px;
+    padding: 0 20px;
+}
+
+.fa{
+    box-sizing: border-box;
+    padding: 10px;
+    width: 42.5px;
+    height: 42.5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    color: #000000;
+    text-align: center;
+    font-size: 1.2em;
+    transition: all 1s;
+}
+
+form:hover{
+    width: 300px;
+    cursor: pointer;
+    border: 4px solid black;
+    
+}
+
+form:hover input{
+    display: block;
+    
+}
+
+form:hover .fa{
+    background: #000000;
+    color: white;
+  
+}
+
+/* section2 */
+.newButton{
+  padding: 0.2rem;
+  border-radius: 5px;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+#twoBorder .in{
+  padding: 1rem 2rem;
+  position: relative;
+  background: #000000;
+  font-size: 1rem;
+  color: white;
+  text-transform: uppercase;
+  transition: 0.5s;
+  z-index: 99;
+}
+
+#twoBorder::after{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2rem;
+  height: 10rem;
+  background: rgb(0, 0, 0);
+  transform: translate(-50%, -50%) rotate(55deg);
+  animation: twoBorder 2s linear infinite;
+}
+@keyframes twoBorder {
+  100%{
+      transform: translate(-50%, -50%) rotate(225deg);
+  }
+}
+
+#twoBorder:hover .in{
+  transition-delay: 0.5s;
+  background: rgb(255, 255, 255);
+  color: black;
+}
+#twoBorder:hover{
+  transition-delay: 0.3s;
+  background: white;
+  box-shadow: 0 0 2px white,
+  0 0 4px white,
+  0 0 8px white;
+}
+
+.container2{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+.cont{
+ position: relative;
+ left: 40px;
+bottom: 60px;
+ color: #fff;
+font-weight: 400;
+
+}
+
+.container3{
+  background-color: aqua;
+  height: 74px;
+}
+
+#welcome{
+  
+  font-family: "Yuji Mai", serif;
+
+}
+#razastore{
+
+
+    font-family: "Edu AU VIC WA NT Arrows"; }
+
+    .para{
+   
+      font-size: 20px;
+    }
+
+ /* Container for the scrolling text */
+.container3 {
+  width: 100%; 
+  overflow: hidden; 
+  position: relative; 
+
+ 
+  background-color: #383838; 
+  padding: 10px 0; 
+  display: flex; 
+  white-space: nowrap; 
+}
+
+/* Individual special offer sections */
+.special, .special2, .special3, .special4 {
+  display: inline-block; 
+
+  font-weight: bold;
+  color: #cf8846;
+  margin-right: 50px;
+  animation: scrollText5 15s linear infinite; /
+}
+
+
+@keyframes scrollText5 {
+  0% {
+    transform: translateX(10%);
+  }
+  100% {
+    transform: translateX(-110%);
+  }
+}
+
+
+/* section 3 */
+
+.container4{
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background-color: #000000;
+}
+
+.card{
+  width: 20rem;
+  height: 24rem;
+  position: relative;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.top{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 12rem;
+  background: #db9b5f;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: 1s;
+  z-index: 1;
+}
+
+.top i{
+  font-size: 3rem;
+  color: white;
+}
+
+.card:hover .top{
+  transform: translateY(-100%);
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.bottom{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 12rem;
+  padding: 1rem;
+  text-align: justify;
+  background: white;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  transition: 1s;
+}
+
+.bottom h1{
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  text-align: start;
+}
+
+.card:hover .bottom{
+  transform: translateY(0);
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+
+/* stars */
+/* Basic Star Rating Styling */
+.star-rating {
+  display: inline-block;
+  font-size: 20px;
+}
+
+/* Default Star Style (unfilled stars) */
+.star {
+  color: #dcdcdc; /* Light gray color for unfilled stars */
+  cursor: pointer;
+}
+
+/* Filled Stars (First Two in this case) */
+.star.filled {
+  color: #ffb400; /* Golden color for filled stars */
+}
+
+
+/* buying */
+/* Purchase Container */
+.purchase-container {
+ position: relative;
+ left: 30px;
+  text-align: end;
+}
+
+/* Buy Button Styling */
+.buy-btn {
+  background-color: #ac7000;
+  color: white;
+  padding: 15px 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.buy-btn:hover {
+  background-color: #a06001;
+}
+
+.div2{
+  display: flex;
+}
+
+.featured{
+  text-align: center;
+  background-color: #000000;
+  padding: 40px;
+  font-weight: 600;
+  font-family: "Yuji Mai", serif;
+  border-bottom: 2px solid white;
+}
+
+
+/* special offer */
+
+.offer{
+  position: relative;
+border-top: 2px solid white;
+border-bottom: 2px solid white;
+  background-image: url(images/offer-bg.png);
+height: 450px;
+background-repeat: no-repeat;
+
+
+}
+.offer__container{
+  grid-template-rows: max-content 220px;
+}
+
+.offer__bg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 160%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.offer__data,
+.offer__img{
+  position: relative;
+}
+.offer__data{
+  text-align: center;
+}
+.offer__title{
+  margin-bottom: 2rem;
+  position: relative;
+right: 290px;
+top: 100px;
+
+}
+.offer__description{
+  margin-bottom: 3rem;
+  position: relative;
+right: 290px;
+top: 100px;
+
+
+}
+.offer__img{
+  
+  position: absolute;
+  max-width: initial;
+  width: 500px;
+  bottom: 2rem;
+  right: 90px;
+  top: 130px;
+
+}
+
+.nav-link2{
+  position: relative;
+right: 290px;
+top: 110px;
+text-decoration: none;
+border-radius: 50px;
+color: #fff;
+padding: 20px;
+border: 4px solid red;
+transition-duration: 0.5s;
+transition-property: color,background-color;
+}
+.nav-link2:hover{
+
+background-color: red;
+color: #ffffff;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+:root {
+    --bg: #ececf0;
+    --card-bg: #FBFBFB;
+    --black: #1E2021;
+    --white: #ffffff;
+    --orange: #c4722f;
+}
+
+
+.container11 {
+    max-width: 100rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+    background-color: #a06001;
+}
+
+.product-filter-btns {
+    padding: 3rem 0 2rem 0;
+    display: flex;
+    gap: 1.7rem;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.btn-filter {
+    display: inline-flex;
+    padding: 0.7rem 4rem;
+    border-radius: 2.7rem;
+    cursor: pointer;
+    border: 0.2rem solid var(--black);
+    color: var(--black);
+    font-weight: 500;
+    transition: all 0.5s ease-in;
+position: relative;
+LEFt: 340PX;
+}
+
+.btn-filter.mixitup-control-active {
+    transition: all 0.5s ease-in;
+    background: var(--black);
+    color: var(--white);
+    text-align: center;
+}
+
+.product-filter-items {
+    padding: 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(27rem, 1fr));
+    gap: 2rem;
+}
+
+.mix {
+    background: var(--card-bg);
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+   
+}
+
+.item-top {
+    padding: rem 0 0.9rem 0;
+}
+
+.item-top img {
+    width: 100%;
+}
+
+.item-bottom {
+    padding: 2rem 2rem 1.5rem 2rem;
+}
+
+.item-heading {
+    
+    color: var(--black);
+}
+
+
+
+.price-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.price {
+    
+    color: var(--black);
+}
+
+.btn-cart {
+    display: inline-flex;
+background-color: #000000;
+    color: var(--white);
+    width: 3rem;
+    height: 3rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+}
+
+
+.btn-cart ion-icon {
+    font-size: 2rem;
+    --ionicon-stroke-width: 32px;
+}
+
+.btn-cart ion-icon:hover{
+  color: #a06001;
+}
+
+
+@keyframes down {
+    0% {
+        transform: translateY(2rem);
+    }
+    100% {
+        transform: translateY(0rem);
+    }
+}
+
+
+/* Carousel container */
+#carouselExampleCaptions {
+  position: relative;
+  left: 320px;
+  width: 60%;
+  height: 80vh; /* Full screen height */
+  overflow: hidden;
+}
+
+.Cars-menu{
+padding: 40px;
+  text-align: center;
+  align-items: center;
+  color: #dcdcdc;
+  background-color: #a06001;
+  height: 130px;
+}
+
+/* General Footer Styling */
+.footer {
+
+  background-image: url(https://c4.wallpaperflare.com/wallpaper/825/436/909/audi-r8-sports-car-tuning-wallpaper-preview.jpg);
+  background-attachment: fixed;
+
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif; /* Modern, clean font */
+  border-top: 4px solid #ffffff; /* Subtle border to match gold accent */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15); /* Soft shadow for depth */
+  position: relative;
+  opacity: 0;
+  animation: fadeInFooter 1s ease forwards; /* Fade-in animation */
+}
+
+/* Fade-in Animation for Footer */
+@keyframes fadeInFooter {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+/* Footer content container */
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Footer Logo Styling */
+.footer-logo img {
+  width: 130px; /* Slightly larger logo for prominence */
+  margin-bottom: 30px;
+  transition: transform 0.3s ease; /* Logo hover effect */
+}
+
+/* Hover effect for logo */
+.footer-logo img:hover {
+  transform: scale(1.05); /* Subtle zoom effect */
+}
+
+/* Footer Links */
+.footer-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease, letter-spacing 0.3s ease; /* Added letter spacing transition */
+}
+
+/* Hover effect for footer links */
+.footer-link:hover {
+  color: #d86b04; /* Gold color on hover */
+  transform: scale(1.1);
+  letter-spacing: 2px; /* Slight spacing effect on hover */
+}
+
+/* Underline effect on hover */
+.footer-link:hover::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #ffffff; /* Gold underline */
+  transform: scaleX(1);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Social Icons Styling */
+.footer-social {
+  margin-bottom: 30px;
+}
+
+.social-icon {
+  color: white;
+  font-size: 28px; /* Slightly larger icons for visibility */
+  margin: 0 20px;
+  transition: color 0.3s ease, transform 0.3s ease, filter 0.3s ease; /* Added filter for icons */
+}
+
+/* Hover effect for social icons */
+.social-icon:hover {
+  color: #b97f00; /* Gold hover effect */
+  transform: scale(1.2); /* Slight scaling effect */
+  filter: brightness(1.3); /* Slight brightness increase */
+}
+
+/* Footer Bottom Text */
+.footer-bottom p {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.6); /* Subtle text color for footer */
+  margin-top: 0px;
+  padding: 20px;
+  font-weight: 300; /* Light font for the copyright text */
+  letter-spacing: 0.5px; /* Slight letter-spacing for readability */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-links {
+      flex-direction: column; /* Stack the links vertically on small screens */
+      gap: 30px;
+  }
+
+  .footer-logo img {
+      width: 100px; /* Slightly smaller logo on small screens */
+  }
+
+  .footer-social {
+      margin-top: 30px;
+  }
+}
+
+/* Scroll-to-top button styling */
+.scroll-to-top {
+  position: absolute;
+  right: 50px;
+  bottom: 20px;
+  background-color: #8d5306;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 30px;
+  transition: transform 0.3s ease;
+}
+
+.scroll-to-top:hover {
+  transform: scale(1.1); /* Zoom effect on hover */
+}
+
+/* Adding shadow to buttons for better visibility */
+.scroll-to-top {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for the button */
+}
